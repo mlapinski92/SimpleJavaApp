@@ -1,4 +1,4 @@
-package SimpleJavaApp;
+package simpleJavaApp;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,10 +9,10 @@ import java.awt.event.FocusEvent;
 
 
 public class LoginScreen extends JFrame {
-    private JButton Login;
+
     private JPanel panelMain;
-    private JPasswordField password;
-    private JTextField username;
+    private JPasswordField passwordField;
+    private JTextField usernameField;
     private JButton loginButton;
     private JButton exitButton;
 
@@ -29,10 +29,10 @@ public class LoginScreen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String user, pass;
-                user = username.getText();
-                pass = password.getText();
+                user = usernameField.getText();
+                pass = passwordField.getText();
 
-                if (user.equals("admin") && pass.equals("123")) {
+                if (user.equals(AccountUtil.USER_NAME) && pass.equals(AccountUtil.PASSWORD)) {
                     JOptionPane.showMessageDialog(panelMain, "You are successfully logged in.");
                     InputScreen inputScreen = new InputScreen();
                     inputScreen.setVisible(true);
@@ -50,22 +50,22 @@ public class LoginScreen extends JFrame {
                 JOptionPane.showMessageDialog(panelMain, "Goodbye.");
             }
         });
-        username.addFocusListener(new FocusAdapter() {
+        usernameField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (username.getText().trim().toLowerCase().equals("username")) {
-                    username.setText("");
-                    username.setForeground(Color.black);
+                if (usernameField.getText().trim().toLowerCase().equals("username")) {
+                    usernameField.setText("");
+                    usernameField.setForeground(Color.black);
                 }
                 super.focusGained(e);
             }
         });
-        password.addFocusListener(new FocusAdapter() {
+        passwordField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (password.getText().trim().toLowerCase().equals("password")) {
-                    password.setText("");
-                    password.setForeground(Color.black);
+                if (passwordField.getText().trim().toLowerCase().equals("password")) {
+                    passwordField.setText("");
+                    passwordField.setForeground(Color.black);
                 }
                 super.focusGained(e);
             }

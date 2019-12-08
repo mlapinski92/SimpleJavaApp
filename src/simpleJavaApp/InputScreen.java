@@ -1,4 +1,4 @@
-package SimpleJavaApp;
+package simpleJavaApp;
 
 import javax.swing.*;
 
