@@ -1,11 +1,15 @@
-package SimpleJavaApp;
+package simpleJavaApp;
 
 import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) {
 
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -16,3 +20,4 @@ public class Main {
         });
     }
 }
+
