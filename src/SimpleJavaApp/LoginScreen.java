@@ -8,7 +8,7 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
 
-public class MainApp extends JFrame {
+public class LoginScreen extends JFrame {
     private JButton Login;
     private JPanel panelMain;
     private JPasswordField password;
@@ -17,7 +17,7 @@ public class MainApp extends JFrame {
     private JButton exitButton;
 
 
-    public MainApp() {
+    public LoginScreen() {
         add(panelMain);
         setTitle("Please Log in");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -34,6 +34,10 @@ public class MainApp extends JFrame {
 
                 if (user.equals("admin") && pass.equals("123")) {
                     JOptionPane.showMessageDialog(panelMain, "You are successfully logged in.");
+                    InputScreen inputScreen = new InputScreen();
+                    inputScreen.setVisible(true);
+                    LoginScreen.super.dispose();
+
                 } else {
                     JOptionPane.showMessageDialog(panelMain, "Login or password incorrect. Try again");
                 }

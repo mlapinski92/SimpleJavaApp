@@ -10,8 +10,8 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                MainApp mainApp = new MainApp();
-                mainApp.setVisible(true);
+                LoginScreen loginScreen = new LoginScreen();
+                loginScreen.setVisible(true);
             }
         });
     }
