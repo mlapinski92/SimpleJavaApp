@@ -1,4 +1,4 @@
-package simpleJavaApp;
+package simpleJavaApp.loginPassword;
 
 public class AccountUtil {
 

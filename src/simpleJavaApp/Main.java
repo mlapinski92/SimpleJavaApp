@@ -1,5 +1,7 @@
 package simpleJavaApp;
 
+import simpleJavaApp.GUI.LoginScreen;
+
 import javax.swing.*;
 
 public class Main {
