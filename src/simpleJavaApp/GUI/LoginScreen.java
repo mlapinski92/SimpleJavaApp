@@ -1,4 +1,6 @@
-package simpleJavaApp;
+package simpleJavaApp.GUI;
+
+import simpleJavaApp.loginPassword.AccountUtil;
 
 import javax.swing.*;
 import java.awt.*;
